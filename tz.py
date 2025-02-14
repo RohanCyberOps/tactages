@@ -16,9 +16,9 @@ def print_banner():
     {Fore.RED}   ██║   ██║  ██║╚██████╗   ██║   ██║  ██║╚██████╔╝███████╗███████║
     {Fore.RED}   ╚═╝   ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝
     {Fore.CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    {Fore.YELLOW}  🚀 Terminal TacticalZero - The Ultimate Pentesting Interface 🚀
+    {Fore.YELLOW}  🚀 TACTAGES - The Ultimate Pentesting Interface 🚀
     {Fore.CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    {Fore.GREEN}  🔹 A Multi-Tool Interface for Ethical Hacking & Cybersecurity 🔹
+    {Fore.GREEN}  🔹 A Multi-Tool Interface for Ethical Hacking & Cybersecurity 🔹 @TacticalZero
     {Fore.GREEN}  🔹 Tools: {Fore.RED}Nmap{Fore.GREEN}, {Fore.RED}Metasploit{Fore.GREEN}, {Fore.RED}Wireshark{Fore.GREEN}, {Fore.RED}Hydra{Fore.GREEN}, {Fore.RED}John the Ripper{Fore.GREEN}, etc. 🔹
     {Fore.CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     {Style.RESET_ALL}
@@ -72,7 +72,7 @@ def main_menu():
         elif choice == "4":
             run_hydra()
         elif choice == "5":
-            print(f"{Fore.RED}[*] Exiting Terminal TacticalZero. Goodbye!")
+            print(f"{Fore.RED}[*] Exiting TACTAGES. Goodbye!")
             sys.exit()
         else:
             print(f"{Fore.RED}[!] Invalid option. Please try again.")
