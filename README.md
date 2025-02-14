@@ -1,3 +1,4 @@
+![TACTAGES](image.png)
 # 🚀 TACTAGES: TacticalZero Multi-Tool Interface
 
 [![GitHub Stars](https://img.shields.io/github/stars/RohanCyberOps/tactages?style=for-the-badge)](https://github.com/RohanCyberOps/tactages/stargazers) [![GitHub Forks](https://img.shields.io/github/forks/RohanCyberOps/tactages?style=for-the-badge)](https://github.com/RohanCyberOps/tactages/network/members) [![GitHub License](https://img.shields.io/github/license/RohanCyberOps/tactages?style=for-the-badge)](LICENSE)
