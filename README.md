@@ -1,31 +1,35 @@
-# TACTAGES 🚀
+# 🚀 TACTAGES: TacticalZero Multi-Tool Interface
+
+[![GitHub Stars](https://img.shields.io/github/stars/RohanCyberOps/tactages?style=for-the-badge)](https://github.com/RohanCyberOps/tactages/stargazers) [![GitHub Forks](https://img.shields.io/github/forks/RohanCyberOps/tactages?style=for-the-badge)](https://github.com/RohanCyberOps/tactages/network/members) [![GitHub License](https://img.shields.io/github/license/RohanCyberOps/tactages?style=for-the-badge)](LICENSE)
 
 **TACTAGES** is a powerful, terminal-based multi-tool interface designed for ethical hacking, penetration testing, and cybersecurity analysis. It integrates popular tools like **Nmap**, **Metasploit Framework**, **Wireshark**, **Hydra**, and more into a single, user-friendly interface. Whether you're a cybersecurity professional or a hobbyist, TACTAGES simplifies your workflow and enhances productivity.
 
 ---
 
-## Features ✨
+## ✨ Features
 
-- **Integrated Tools**: Access multiple cybersecurity tools from a single interface.
-- **User-Friendly Menu**: Intuitive terminal menu for easy navigation.
-- **Customizable**: Easily add or remove tools based on your needs.
-- **Cross-Platform**: Works on Windows, Linux, and macOS (with required dependencies).
-- **Colored Output**: Enhanced terminal experience with colored text and banners.
-
----
-
-## Tools Included 🛠️
-
-1. **Nmap**: Network scanning and enumeration.
-2. **Metasploit Framework**: Exploitation and post-exploitation.
-3. **Wireshark**: Packet analysis and network monitoring.
-4. **Hydra**: Password cracking and brute-force attacks.
-5. **John the Ripper**: Password cracking (coming soon).
-6. **More Tools**: Easily extendable to include additional tools.
+✅ **Integrated Tools**: Access multiple cybersecurity tools from a single interface.  
+✅ **User-Friendly Menu**: Intuitive terminal menu for easy navigation.  
+✅ **Customizable**: Easily add or remove tools based on your needs.  
+✅ **Cross-Platform**: Works on Windows, Linux, and macOS (with required dependencies).  
+✅ **Colored Output**: Enhanced terminal experience with colored text and banners.  
 
 ---
 
-## Installation 🛠️
+## 🛠️ Tools Included
+
+| Tool                 | Purpose                                      |
+|----------------------|----------------------------------------------|
+| **Nmap**            | Network scanning and enumeration             |
+| **Metasploit**      | Exploitation and post-exploitation           |
+| **Wireshark**       | Packet analysis and network monitoring       |
+| **Hydra**           | Password cracking and brute-force attacks    |
+| **John the Ripper** | Password cracking (coming soon)              |
+| **More Tools**      | Easily extendable to include additional tools |
+
+---
+
+## ⚡ Installation
 
 ### Prerequisites
 - Python 3.x
@@ -36,60 +40,54 @@
   - Hydra
 
 ### Steps
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/RohanCyberOps/tactages.git
-   cd Terminal-TacticalZero
-   ```
+```bash
+# Clone the repository
+git clone https://github.com/RohanCyberOps/tactages.git
+cd tactages
 
-2. Install dependencies:
-   ```bash
-   pip install colorama
-   ```
+# Install dependencies
+pip install colorama
 
-3. Run the script:
-   ```bash
-   python tz.py
-   ```
+# Run the script
+python tz.py
+```
 
 ---
 
-## Usage 🖥️
+## 🖥️ Usage
 
-1. Launch the script:
-   ```bash
-   python tz.py
-   ```
+### Launch the Script
+```bash
+python tz.py
+```
 
-2. You'll see the main menu:
-   ```
-   ████████╗ █████╗  ██████╗████████╗ █████╗  ██████╗ ███████╗███████╗
-   ╚══██╔══╝██╔══██╗██╔════╝╚══██╔══╝██╔══██╗██╔════╝ ██╔════╝██╔════╝
-      ██║   ███████║██║        ██║   ███████║██║  ███╗█████╗  ███████╗
-      ██║   ██╔══██║██║        ██║   ██╔══██║██║   ██║██╔══╝  ╚════██║
-      ██║   ██║  ██║╚██████╗   ██║   ██║  ██║╚██████╔╝███████╗███████║
-      ╚═╝   ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     🚀 TACTAGES - The Ultimate Pentesting Interface 🚀 @TacticalZero
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     🔹 A Multi-Tool Interface for Ethical Hacking & Cybersecurity 🔹
-     🔹 Tools: Nmap, Metasploit, Wireshark, Hydra, John the Ripper, etc. 🔹
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+### Main Menu
+```bash
+████████╗ █████╗  ██████╗████████╗ █████╗  ██████╗ ███████╗███████╗
+╚══██╔══╝██╔══██╗██╔════╝╚══██╔══╝██╔══██╗██╔════╝ ██╔════╝██╔════╝
+   ██║   ███████║██║        ██║   ███████║██║  ███╗█████╗  ███████╗
+   ██║   ██╔══██║██║        ██║   ██╔══██║██║   ██║██╔══╝  ╚════██║
+   ██║   ██║  ██║╚██████╗   ██║   ██║  ██║╚██████╔╝███████╗███████║
+   ╚═╝   ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🚀 TACTAGES - The Ultimate Pentesting Interface 🚀 @TacticalZero
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🔹 A Multi-Tool Interface for Ethical Hacking & Cybersecurity 🔹
+  🔹 Tools: Nmap, Metasploit, Wireshark, Hydra, John the Ripper, etc. 🔹
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-   Main Menu:
-   1. Run Nmap Scan
-   2. Launch Metasploit Framework
-   3. Launch Wireshark
-   4. Run Hydra Attack
-   5. Exit
-   [?] Select an option:
-   ```
-
-3. Select an option to run the desired tool.
+Main Menu:
+1. Run Nmap Scan
+2. Launch Metasploit Framework
+3. Launch Wireshark
+4. Run Hydra Attack
+5. Exit
+[?] Select an option:
+```
 
 ---
 
-## Adding New Tools 🛠️
+## 🔧 Adding New Tools
 
 To add a new tool:
 1. Create a new function in the script (e.g., `run_sqlmap()`).
@@ -98,6 +96,9 @@ To add a new tool:
 
 Example:
 ```python
+import subprocess
+from colorama import Fore
+
 def run_sqlmap():
     target = input(f"{Fore.YELLOW}[?] Enter the target URL: ")
     command = f"sqlmap -u {target} --batch"
@@ -115,33 +116,34 @@ elif choice == "6":
 
 ---
 
-## Contributing 🤝
+## 🤝 Contributing
 
 Contributions are welcome! If you'd like to add a new tool, improve the interface, or fix a bug, please follow these steps:
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/YourFeatureName`).
-3. Commit your changes (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature/YourFeatureName`).
-5. Open a pull request.
+1. **Fork the repository**.
+2. **Create a new branch** (`git checkout -b feature/YourFeatureName`).
+3. **Commit your changes** (`git commit -m 'Add some feature'`).
+4. **Push to the branch** (`git push origin feature/YourFeatureName`).
+5. **Open a pull request**.
 
 ---
 
-## License 📜
+## 📜 License
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
 ---
 
-## Disclaimer ⚠️
+## ⚠️ Disclaimer
 
 This tool is intended for **ethical hacking** and **educational purposes only**. Do not use it for illegal activities. The developers are not responsible for any misuse of this tool.
 
 ---
 
-## Support 💬
+## 💬 Support
 
 If you encounter any issues or have suggestions, please open an issue on the [GitHub repository](https://github.com/RohanCyberOps/tactages/issues).
 
 ---
 
-**Happy Hacking!** 🚀
+### **Happy Hacking!** 🚀
+
