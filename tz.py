@@ -1,12 +1,12 @@
 import subprocess
 import sys
+import os
+from datetime import datetime
 
 from colorama import Fore, init, Style
 
 init(autoreset=True)
 
-
-init(autoreset=True)
 def print_banner():
     banner = f"""
     {Fore.RED}████████╗ █████╗  ██████╗████████╗ █████╗  ██████╗ ███████╗███████╗
@@ -14,7 +14,7 @@ def print_banner():
     {Fore.RED}   ██║   ███████║██║        ██║   ███████║██║  ███╗█████╗  ███████╗
     {Fore.RED}   ██║   ██╔══██║██║        ██║   ██╔══██║██║   ██║██╔══╝  ╚════██║
     {Fore.RED}   ██║   ██║  ██║╚██████╗   ██║   ██║  ██║╚██████╔╝███████╗███████║
-    {Fore.RED}   ╚═╝   ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝
+    {Fore.RED}   ╚═╝   ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝  ╚═════╝ ╚══════╝╚══════╝
     {Fore.CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     {Fore.YELLOW}  🚀 Terminal TacticalZero - The Ultimate Pentesting Interface 🚀
     {Fore.CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -25,22 +25,32 @@ def print_banner():
     """
     print(banner)
 
+def log_output(tool_name, output):
+    if not os.path.exists("log"):
+        os.makedirs("log")
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    filename = f"log/{tool_name}_log_{timestamp}.txt"
+    with open(filename, "w") as log_file:
+        log_file.write(output)
+
 def run_nmap():
-    target = input(f"{Fore.YELLOW}[?] Enter the target IP or hostname: ")
     command = f"nmap -sV -sC -oA nmap_scan {target}"
     print(f"{Fore.BLUE}[*] Running Nmap scan on {target}...")
-    subprocess.run(command, shell=True)
+    result = subprocess.run(command, shell=True, capture_output=True, text=True)
     print(f"{Fore.GREEN}[+] Nmap scan completed!")
+    log_output("nmap", result.stdout)
 
 def run_metasploit():
     print(f"{Fore.BLUE}[*] Launching Metasploit Framework...")
-    subprocess.run("msfconsole", shell=True)
+    result = subprocess.run("msfconsole", shell=True, capture_output=True, text=True)
     print(f"{Fore.GREEN}[+] Metasploit session ended.")
+    log_output("metasploit", result.stdout)
 
 def run_wireshark():
     print(f"{Fore.BLUE}[*] Launching Wireshark...")
-    subprocess.run("wireshark", shell=True)
+    result = subprocess.run("wireshark", shell=True, capture_output=True, text=True)
     print(f"{Fore.GREEN}[+] Wireshark closed.")
+    log_output("wireshark", result.stdout)
 
 def run_hydra():
     target = input(f"{Fore.YELLOW}[?] Enter the target IP: ")
@@ -49,8 +59,17 @@ def run_hydra():
     passlist = input(f"{Fore.YELLOW}[?] Enter the path to the password list: ")
     command = f"hydra -L {userlist} -P {passlist} {target} {service}"
     print(f"{Fore.BLUE}[*] Running Hydra on {target}...")
-    subprocess.run(command, shell=True)
+    result = subprocess.run(command, shell=True, capture_output=True, text=True)
     print(f"{Fore.GREEN}[+] Hydra attack completed!")
+    log_output("hydra", result.stdout)
+
+def run_sqlmap():
+    target = input(f"{Fore.YELLOW}[?] Enter the target URL: ")
+    command = f"sqlmap -u {target} --batch"
+    print(f"{Fore.BLUE}[*] Running sqlmap on {target}...")
+    result = subprocess.run(command, shell=True, capture_output=True, text=True)
+    print(f"{Fore.GREEN}[+] SQLMap scan completed!")
+    log_output("sqlmap", result.stdout)
 
 def main_menu():
     print_banner()
@@ -60,7 +79,8 @@ def main_menu():
         print(f"{Fore.YELLOW}2. Launch Metasploit Framework")
         print(f"{Fore.YELLOW}3. Launch Wireshark")
         print(f"{Fore.YELLOW}4. Run Hydra Attack")
-        print(f"{Fore.YELLOW}5. Exit")
+        print(f"{Fore.YELLOW}5. Run SQLMap Scan")
+        print(f"{Fore.YELLOW}6. Exit")
         choice = input(f"{Fore.YELLOW}[?] Select an option: ")
 
         if choice == "1":
@@ -72,6 +92,8 @@ def main_menu():
         elif choice == "4":
             run_hydra()
         elif choice == "5":
+            run_sqlmap()
+        elif choice == "6":
             print(f"{Fore.RED}[*] Exiting Terminal TacticalZero. Goodbye!")
             sys.exit()
         else:

@@ -1,4 +1,4 @@
-![TACTAGES](image.png)
+![TACTAGES](assets/image.png)
 
 # 🚀 TACTAGES: TacticalZero Multi-Tool Interface
 
@@ -86,35 +86,6 @@ Main Menu:
 4. Run Hydra Attack
 5. Exit
 [?] Select an option:
-```
-
----
-
-## 🔧 Adding New Tools
-
-Want to add a new tool? Follow these steps:
-1. Create a new function in `tz.py` (e.g., `run_sqlmap()`).
-2. Add the tool to the main menu.
-3. Implement logic to call the function when selected.
-
-### Example: Adding SQLMap
-```python
-import subprocess
-from colorama import Fore
-
-def run_sqlmap():
-    target = input(f"{Fore.YELLOW}[?] Enter the target URL: ")
-    command = f"sqlmap -u {target} --batch"
-    print(f"{Fore.BLUE}[*] Running sqlmap on {target}...")
-    subprocess.run(command, shell=True)
-    print(f"{Fore.GREEN}[+] SQLMap scan completed!")
-```
-
-Now, update the menu:
-```python
-print(f"{Fore.YELLOW}6. Run SQLMap Scan")
-elif choice == "6":
-    run_sqlmap()
 ```
 
 ---
