@@ -2,7 +2,8 @@
 
 # 🚀 TACTAGES: TacticalZero Multi-Tool Interface
 
-[![GitHub Stars](https://img.shields.io/github/stars/RohanCyberOps/tactages?style=for-the-badge)](https://github.com/RohanCyberOps/tactages/stargazers) [![GitHub Forks](https://img.shields.io/github/forks/RohanCyberOps/tactages?style=for-the-badge)](https://github.com/RohanCyberOps/tactages/network/members) [![GitHub License](https://img.shields.io/github/license/RohanCyberOps/tactages?style=for-the-badge)](LICENSE)
+ 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)  [![GitHub Release](https://img.shields.io/github/release/RohanCyberOps/tactages.svg)](https://github.com/RohanCyberOps/tactages/releases)  [![Downloads](https://img.shields.io/sourceforge/dm/tactages.svg)](https://sourceforge.net/projects/tactages/)  
 
 **TACTAGES** is a powerful, terminal-based multi-tool interface designed for ethical hacking, penetration testing, and cybersecurity analysis. It seamlessly integrates essential cybersecurity tools like **Nmap**, **Metasploit Framework**, **Wireshark**, **Hydra**, and more into a streamlined, user-friendly interface. Whether you're a professional security analyst or an enthusiast, TACTAGES enhances your workflow and efficiency.
 
