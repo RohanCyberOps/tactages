@@ -14,10 +14,9 @@ def print_banner():
     {Fore.RED}   ██║   ███████║██║        ██║   ███████║██║  ███╗█████╗  ███████╗
     {Fore.RED}   ██║   ██╔══██║██║        ██║   ██╔══██║██║   ██║██╔══╝  ╚════██║
     {Fore.RED}   ██║   ██║  ██║╚██████╗   ██║   ██║  ██║╚██████╔╝███████╗███████║
-    {Fore.RED}   ╚═╝   ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝  ╚═════╝ ╚══════╝╚══════╝
+    {Fore.RED}   ╚═╝   ╚═╝  ╚═════╝   ╚═╝   ╚═╝  ╚═════╝ ╚══════╝╚══════╝
     {Fore.CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    {Fore.YELLOW}  🚀 Terminal TacticalZero - The Ultimate Pentesting Interface 🚀
-    {Fore.CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    {Fore.YELLOW}  🚀 TACTAGES- The Ultimate Pentesting Interface 🚀
     {Fore.GREEN}  🔹 A Multi-Tool Interface for Ethical Hacking & Cybersecurity 🔹
     {Fore.GREEN}  🔹 Tools: {Fore.RED}Nmap{Fore.GREEN}, {Fore.RED}Metasploit{Fore.GREEN}, {Fore.RED}Wireshark{Fore.GREEN}, {Fore.RED}Hydra{Fore.GREEN}, {Fore.RED}John the Ripper{Fore.GREEN}, etc. 🔹
     {Fore.CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -25,32 +24,36 @@ def print_banner():
     """
     print(banner)
 
-def log_output(tool_name, output):
+def log_output(tool_name, stdout, stderr):
     if not os.path.exists("log"):
         os.makedirs("log")
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    filename = f"log/{tool_name}_log_{timestamp}.txt"
-    with open(filename, "w") as log_file:
-        log_file.write(output)
+    stdout_filename = f"log/{tool_name}_stdout_{timestamp}.txt"
+    stderr_filename = f"log/{tool_name}_stderr_{timestamp}.txt"
+    with open(stdout_filename, "w") as stdout_file:
+        stdout_file.write(stdout)
+    with open(stderr_filename, "w") as stderr_file:
+        stderr_file.write(stderr)
 
 def run_nmap():
+    target = input(f"{Fore.YELLOW}[?] Enter the target IP or hostname: ")
     command = f"nmap -sV -sC -oA nmap_scan {target}"
     print(f"{Fore.BLUE}[*] Running Nmap scan on {target}...")
     result = subprocess.run(command, shell=True, capture_output=True, text=True)
     print(f"{Fore.GREEN}[+] Nmap scan completed!")
-    log_output("nmap", result.stdout)
+    log_output("nmap", result.stdout, result.stderr)
 
 def run_metasploit():
     print(f"{Fore.BLUE}[*] Launching Metasploit Framework...")
     result = subprocess.run("msfconsole", shell=True, capture_output=True, text=True)
     print(f"{Fore.GREEN}[+] Metasploit session ended.")
-    log_output("metasploit", result.stdout)
+    log_output("metasploit", result.stdout, result.stderr)
 
 def run_wireshark():
     print(f"{Fore.BLUE}[*] Launching Wireshark...")
     result = subprocess.run("wireshark", shell=True, capture_output=True, text=True)
     print(f"{Fore.GREEN}[+] Wireshark closed.")
-    log_output("wireshark", result.stdout)
+    log_output("wireshark", result.stdout, result.stderr)
 
 def run_hydra():
     target = input(f"{Fore.YELLOW}[?] Enter the target IP: ")
@@ -61,7 +64,7 @@ def run_hydra():
     print(f"{Fore.BLUE}[*] Running Hydra on {target}...")
     result = subprocess.run(command, shell=True, capture_output=True, text=True)
     print(f"{Fore.GREEN}[+] Hydra attack completed!")
-    log_output("hydra", result.stdout)
+    log_output("hydra", result.stdout, result.stderr)
 
 def run_sqlmap():
     target = input(f"{Fore.YELLOW}[?] Enter the target URL: ")
@@ -69,35 +72,39 @@ def run_sqlmap():
     print(f"{Fore.BLUE}[*] Running sqlmap on {target}...")
     result = subprocess.run(command, shell=True, capture_output=True, text=True)
     print(f"{Fore.GREEN}[+] SQLMap scan completed!")
-    log_output("sqlmap", result.stdout)
+    log_output("sqlmap", result.stdout, result.stderr)
 
 def main_menu():
     print_banner()
-    while True:
-        print(f"\n{Fore.CYAN}Main Menu:")
-        print(f"{Fore.YELLOW}1. Run Nmap Scan")
-        print(f"{Fore.YELLOW}2. Launch Metasploit Framework")
-        print(f"{Fore.YELLOW}3. Launch Wireshark")
-        print(f"{Fore.YELLOW}4. Run Hydra Attack")
-        print(f"{Fore.YELLOW}5. Run SQLMap Scan")
-        print(f"{Fore.YELLOW}6. Exit")
-        choice = input(f"{Fore.YELLOW}[?] Select an option: ")
+    try:
+        while True:
+            print(f"\n{Fore.CYAN}Main Menu:")
+            print(f"{Fore.YELLOW}1. Run Nmap Scan")
+            print(f"{Fore.YELLOW}2. Launch Metasploit Framework")
+            print(f"{Fore.YELLOW}3. Launch Wireshark")
+            print(f"{Fore.YELLOW}4. Run Hydra Attack")
+            print(f"{Fore.YELLOW}5. Run SQLMap Scan")
+            print(f"{Fore.YELLOW}6. Exit")
+            choice = input(f"{Fore.YELLOW}[?] Select an option: ")
 
-        if choice == "1":
-            run_nmap()
-        elif choice == "2":
-            run_metasploit()
-        elif choice == "3":
-            run_wireshark()
-        elif choice == "4":
-            run_hydra()
-        elif choice == "5":
-            run_sqlmap()
-        elif choice == "6":
-            print(f"{Fore.RED}[*] Exiting Terminal TacticalZero. Goodbye!")
-            sys.exit()
-        else:
-            print(f"{Fore.RED}[!] Invalid option. Please try again.")
+            if choice == "1":
+                run_nmap()
+            elif choice == "2":
+                run_metasploit()
+            elif choice == "3":
+                run_wireshark()
+            elif choice == "4":
+                run_hydra()
+            elif choice == "5":
+                run_sqlmap()
+            elif choice == "6":
+                print(f"{Fore.RED}[*] Exiting Terminal . Goodbye!")
+                sys.exit(0)
+            else:
+                print(f"{Fore.RED}[!] Invalid option. Please try again.")
+    except KeyboardInterrupt:
+        print(f"\n{Fore.RED}[*] Exiting Terminal  Goodbye!")
+        sys.exit(0)
 
 if __name__ == "__main__":
     main_menu()

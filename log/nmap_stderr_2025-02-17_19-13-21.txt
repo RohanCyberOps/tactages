@@ -1,0 +1,2 @@
+Failed to resolve "YHF".
+WARNING: No targets were specified, so 0 hosts scanned.
