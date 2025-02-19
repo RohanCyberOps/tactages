@@ -19,7 +19,7 @@
 
 ---
 
-## 🛠️ Tools Included
+## Tools Included
 
 | Tool                 | Functionality                                  |
 |----------------------|----------------------------------------------|
@@ -118,5 +118,5 @@ For issues, suggestions, or feedback, open an issue on the [GitHub repository](h
 
 ---
 
-### **Happy Hacking!** 🚀
+### **Happy Hacking!** 
 
