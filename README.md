@@ -1,6 +1,6 @@
 ![TACTAGES](assets/image.png)
 
-# 🚀 TACTAGES: TacticalZero Multi-Tool Interface
+#  TACTAGES: TacticalZero Multi-Tool Interface
 
  
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)  [![GitHub Release](https://img.shields.io/github/release/RohanCyberOps/tactages.svg)](https://github.com/RohanCyberOps/tactages/releases)  [![Downloads](https://img.shields.io/sourceforge/dm/tactages.svg)](https://sourceforge.net/projects/tactages/)  
@@ -9,13 +9,13 @@
 
 ---
 
-## ✨ Features
+##  Features
 
-✅ **All-in-One Interface** – Access multiple security tools from a single dashboard.  
-✅ **User-Friendly Navigation** – Simplified terminal menu for effortless use.  
-✅ **Highly Customizable** – Add or remove tools based on your specific needs.  
-✅ **Cross-Platform Support** – Runs on Windows, Linux, and macOS (dependencies required).  
-✅ **Enhanced Terminal Output** – Includes colored text, banners, and improved readability.  
+**All-in-One Interface** – Access multiple security tools from a single dashboard.  
+ **User-Friendly Navigation** – Simplified terminal menu for effortless use.  
+ **Highly Customizable** – Add or remove tools based on your specific needs.  
+ **Cross-Platform Support** – Runs on Windows, Linux, and macOS (dependencies required).  
+ **Enhanced Terminal Output** – Includes colored text, banners, and improved readability.  
 
 ---
 
@@ -32,7 +32,7 @@
 
 ---
 
-## ⚡ Installation
+##  Installation
 
 ### Prerequisites
 - Python 3.x
@@ -57,7 +57,7 @@ python tz.py
 
 ---
 
-## 🖥️ Usage
+##  Usage
 
 ### Launch TACTAGES
 ```bash
@@ -90,7 +90,7 @@ Main Menu:
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! If you'd like to enhance TACTAGES, follow these steps:
 1. **Fork the repository**.
@@ -101,19 +101,18 @@ Contributions are welcome! If you'd like to enhance TACTAGES, follow these steps
 
 ---
 
-## 📜 License
+##  License
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
 ---
 
-## ⚠️ Disclaimer
-
+>## ⚠ Disclaimer
 This tool is strictly for **ethical hacking** and **educational purposes**. Misuse for unauthorized activities is prohibited, and the developers hold no responsibility for any misuse.
 
 ---
 
-## 💬 Support
+##  Support
 
 For issues, suggestions, or feedback, open an issue on the [GitHub repository](https://github.com/RohanCyberOps/tactages/issues).
 
