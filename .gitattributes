@@ -1,0 +1,18 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore IDE configurations
+*.iml
+.idea/
+
+# Ignore external directories
+../CenterNet-master/
+../Hand-Detection-Tool/
+../SecureNet-Analyzer/
+../YoutubeDL/
+../python_project_ideas/
+
+# Ignore logs and environment files
+*.log
+.env
