@@ -90,4 +90,4 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 
 ## Contact
 
-For any inquiries, please contact the project maintainer at [@RohanDevOps].
+For any inquiries, please contact the project maintainer at [RohanDevOps](https://github.com/rohandevops).
