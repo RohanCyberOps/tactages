@@ -1,8 +1,12 @@
 
+<img src="assets/image.png" alt="Tactages" width="4000" height="120" align="right">
+
+---
 # Tactages Toolkit
 
 Tactages Toolkit is a comprehensive suite of tools for network scanning, exploitation, traffic capture, brute force attacks, packet capture and filtering, network communication, password cracking, SQL injection testing, web server scanning, and web application security testing.
 
+---
 ## Features
 
 - **Nmap**: Network Scanning
@@ -17,13 +21,31 @@ Tactages Toolkit is a comprehensive suite of tools for network scanning, exploit
 - **Nikto**: Web Server Scanning
 - **Burp Suite**: Web Application Security Testing
 
+---
+
 ## Installation
+
+Install the required Python packages using pip:
+
+```bash
+pip install -r requirements.txt
+```
+Run the `install_tools.py` script to install tools for the toolkit via the command line:
+
+```bash
+python src/tactages.py
+```
+
+---
 
 ### Prerequisites
 
 - Python 3.x
 - Pip
 - Tkinter (for GUI)
+- For[More](requirements.txt)
+
+---
 
 ### Manual Installation of Tools
 
@@ -43,6 +65,8 @@ Please install the following tools manually:
 
 Ensure that the tools are added to your system's PATH.
 
+---
+
 ### Python Dependencies
 
 Install the required Python packages using pip:
@@ -53,13 +77,31 @@ pip install -r requirements.txt
 
 ## Usage
 
+---
+
 ### Command Line Interface
 
-Run the `main.py` script to use the toolkit via the command line:
+Run the `tactages.py` script to use the toolkit via the command line:
 
 ```bash
 python src/tactages.py
 ```
+>If can't work properly
+
+Run the `main.py` script to use the toolkit via the command line:
+
+```bash
+python src/main.py
+```
+
+
+Run the `Console.py` script to use the toolkit via the command line:
+
+```bash
+python src/Console.py
+``` 
+
+---
 
 ### Graphical User Interface
 
@@ -69,13 +111,17 @@ Run the `GUI.py` script to use the toolkit via the graphical user interface:
 python src/GUI.py
 ```
 
+---
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
+---
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+---
 
 ## Acknowledgements
 
@@ -88,6 +134,10 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 - [Nikto](https://cirt.net/Nikto2)
 - [Burp Suite](https://portswigger.net/burp)
 
+---
+
 ## Contact
 
-For any inquiries, please contact the project maintainer at [your-email@example.com].
+For any inquiries, please contact the project maintainer at [Rohan](mailto:rohannaagar666@outlook.com).
+
+---

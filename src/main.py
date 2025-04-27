@@ -1,3 +1,4 @@
+import os
 import time
 import sys
 import threading
@@ -6,7 +7,7 @@ import logging
 from colorama import Fore, Style
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s' )
 
 class Spinner:
     def __init__(self):
@@ -58,7 +59,35 @@ def countdown(seconds):
 
 def main():
     typewriter("Welcome to Tactages Toolkit!", delay=0.05)
-    print("===========================")
+    print("""
+    ⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡠⣄⡖⠶⠰⠛⠛⠛⠛⠛⠓⠖⠖⢦⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠲⠛⠉⣁⣀⡀⠀⢰⠂⠁⠀⢸⠎⣲⠀⠀⣀⣀⣈⠉⠻⠦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠮⠋⠀⢰⠀⠈⢧⠼⢥⠀⠸⡏⢁⠀⣸⠹⣆⠀⢰⠃⠀⠀⡷⠀⠀⡈⠙⢖⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣠⠞⠁⠀⠚⠢⣼⠀⠀⠨⠧⠚⢀⢀⣉⢥⢤⢬⢤⣈⣀⠈⠣⠤⠴⠋⠀⣴⢋⣱⠀⠈⠳⣄⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣠⡺⠁⡰⠊⠀⠀⠀⠀⠓⣀⡤⡲⡫⡪⡣⡣⡣⡣⡣⡣⡪⡪⡹⡱⡲⣄⡀⠚⠀⠉⠁⢠⡔⢄⠈⢷⢄⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣰⠎⠀⠀⠹⣄⣀⡠⠃⣠⢞⢪⢜⢜⢌⢎⡎⣪⡼⣬⢮⣎⣆⢇⡣⡣⡣⡱⣙⢳⢄⠀⢆⢨⡇⠈⠀⠀⠹⣢⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣼⠊⠀⠀⠀⠀⠀⠈⣠⢞⢕⢕⠕⡕⢜⢜⣵⣫⢻⣽⣯⣿⣳⢟⢝⣽⢎⠎⡎⡪⡪⡪⡳⣄⠁⠀⠀⠀⠀⠀⠸⣦⠀⠀⠀⠀
+⠀⠀⠀⡰⠇⠀⠀⠀⠀⠀⠀⣴⣫⣳⣵⢥⣣⢭⡸⣐⣿⡽⣳⢽⡾⣻⣟⣞⡯⣿⡇⡇⣇⡵⡵⣕⣿⣵⡦⠀⠀⠀⠀⠀⠀⠸⡆⠀⠀⠀
+⠀⠀⢠⡻⠀⡀⣜⣀⣀⠀⣸⡿⣽⣯⣿⣿⣽⣻⣿⢾⢿⡱⣝⣵⣿⢾⣳⢵⡹⡽⣿⣻⣯⣿⣟⣿⣿⣽⣿⣅⠀⣀⡠⡆⡀⡀⢿⡀⠀⠀
+⠀⠀⢘⠅⠀⢘⠕⢪⠀⢐⣿⣻⣿⣽⣿⢾⣿⣻⣾⡻⣕⡝⡖⣟⣞⣯⢿⡕⡽⣸⢝⣿⣟⣯⢿⣻⣾⣟⣾⣷⡁⠀⡖⠭⡅⠀⠨⡃⠀⠀
+⠀⠀⣿⠀⠀⠀⠀⠀⠀⣼⢿⣟⣿⣽⣾⣿⣿⣻⢯⡺⣪⢞⢽⣿⣳⣯⣿⡯⣫⢮⡳⣝⢿⣽⣿⣟⣿⣟⣯⣿⣣⠀⠀⠀⠀⠀⠈⣿⠀⠀
+⠀⠀⣿⠀⠀⠀⠀⠀⠀⣿⢿⣿⣿⢿⣿⣽⡿⣕⢗⢧⡳⣝⢽⣿⣻⣾⣿⣽⣪⡳⣕⢗⣝⢿⣟⣯⣷⣿⢿⣿⣳⠀⠀⠀⠀⠀⠀⣿⠀⠀
+⠀⠀⢿⠀⠀⠀⠀⠀⠀⢫⢭⢹⢑⢻⢑⢍⢪⠸⡘⡔⡜⡮⣻⣟⣿⣯⣷⣿⢲⡱⡘⡌⡆⡣⡙⡍⡝⡜⡝⡜⡕⠀⠀⠀⠀⠀⠀⡿⠀⠀
+⠀⠀⢸⡅⠀⢂⠞⠁⠀⠘⣎⢎⢎⡪⢪⢨⠪⡘⡌⡆⡣⡫⣟⣿⣾⢷⣟⣿⡕⡜⢌⢪⠢⡑⠥⡱⢸⢸⢸⢸⠅⠀⡖⠤⢄⠀⢨⡇⠀⠀
+⠀⠀⠘⣖⠀⠠⠍⢓⡀⠀⢳⡱⡱⡘⡌⢆⠕⢜⢌⠪⡢⢝⣿⣻⣽⣿⢿⣿⣝⢌⢎⠢⡣⠱⡑⡅⡣⡱⣸⡊⠀⢐⠀⠀⡀⠀⣞⠀⠀⠀
+⠀⠀⠀⠸⡆⠀⢜⠁⢈⠄⠀⠳⡱⡨⢪⢘⢌⠪⡂⡇⣎⢟⡷⣿⢿⣿⣻⢷⣗⢵⢸⠨⣊⢪⢘⢌⢪⢸⠎⠀⢠⢈⠒⠒⠀⡰⠇⠀⠀⠀
+⠀⠀⠀⠀⠻⡆⠀⠘⢈⢤⠂⠀⠙⢮⢪⠸⣐⢕⣕⢧⡳⣻⣟⣾⢿⡷⣿⣻⢷⣝⢎⢯⡢⡕⢅⢣⠵⠋⠀⡠⠉⠒⠔⠀⡰⡛⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠹⣆⠈⠁⡜⠔⢀⠄⠀⠙⢮⡢⡣⡒⡕⡍⢮⠸⡣⡹⡩⡪⡓⣝⢪⠹⡰⡘⣜⠼⠃⠀⡠⢨⡈⠓⠄⠀⣰⠏⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠘⢵⡀⠀⠔⠁⢨⠒⠄⠀⠈⠓⠎⢦⣃⡇⡇⡇⡇⡣⡣⡣⣪⡢⡣⠧⠋⠁⢀⣀⠸⣀⢀⠁⠀⢠⠮⠃⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠙⢦⡀⠀⠁⢠⠋⠈⡢⢀⣀⠀⠀⠉⠉⠚⠙⠓⠓⠉⠁⠈⠀⠀⡄⢢⠑⢖⠤⠄⠁⣀⡶⠋⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢗⣄⡀⠑⠒⠁⡞⡖⠁⠀⢀⢲⠀⠤⡀⠠⠰⡀⠑⡄⠀⠈⡅⠀⠈⢀⣠⠞⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠚⠵⣦⣀⡀⠀⠀⠀⠂⠉⠆⠸⠈⠒⠀⠇⠒⠀⠀⢀⡠⡴⠎⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠛⠳⠖⠦⢦⣤⣤⣤⣤⡴⠔⠶⠺⠙⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+
+     """)
 
     while True:
         print("\nSelect a tool to use:")
@@ -74,7 +103,14 @@ def main():
         print("10. Burp Suite - Web Application Security Testing")
         print("11. Exit")
 
-        choice = input("Enter your choice (1-11): ")
+        try:
+            choice = input("Enter your choice (1-11): ")
+            if not choice.isdigit() or int(choice) < 1 or int(choice) > 11:
+                print(Fore.RED + "Invalid choice. Please enter a number between 1 and 11." + Style.RESET_ALL)
+                continue
+        except ValueError:
+            print(Fore.RED + "Invalid input. Please enter a number." + Style.RESET_ALL)
+            continue
 
         if choice == "1":
             target = input("Enter the target IP or range (e.g., 192.168.1.1 or 192.168.1.0/24): ")
@@ -95,7 +131,14 @@ def main():
 
         elif choice == "3":
             interface = input("Enter the network interface (e.g., eth0): ")
-            duration = int(input("Enter the capture duration in seconds (e.g., 10): "))
+            try:
+                duration = int(input("Enter the capture duration in seconds (e.g., 10): "))
+                if duration <= 0:
+                    print(Fore.RED + "Duration must be a positive number." + Style.RESET_ALL)
+                    continue
+            except ValueError:
+                print(Fore.RED + "Invalid input. Please enter a valid number." + Style.RESET_ALL)
+                continue
             print("\nCapturing traffic...")
             countdown(5)  # 5-second countdown
             print("Traffic capture complete!")
@@ -105,6 +148,9 @@ def main():
             service = input("Enter the service to attack (e.g., ssh, ftp): ")
             username = input("Enter the username: ")
             wordlist = input("Enter the path to the wordlist file: ")
+            if not os.path.exists(wordlist):
+                print(Fore.RED + "Error: Wordlist file does not exist." + Style.RESET_ALL)
+                continue
             print("\nRunning brute force attack...")
             spinner = Spinner()
             spinner.start()
@@ -144,6 +190,9 @@ def main():
 
         elif choice == "8":
             url = input("Enter the URL to test for SQL injection: ")
+            if not url.startswith(('http://', 'https://')):
+                print(Fore.RED + "Error: Invalid URL. URL must start with http:// or https://" + Style.RESET_ALL)
+                continue
             print("\nRunning SQLMap...")
             spinner = Spinner()
             spinner.start()
@@ -167,7 +216,13 @@ def main():
             spinner = Spinner()
             spinner.start()
             # Simulate launching Burp Suite
-            os.system("burpsuite")  # Ensure 'burpsuite' is in your PATH or provide the full path
+            try:
+                exit_code = os.system("burpsuite")
+                if exit_code != 0:
+                    print(
+                        Fore.RED + "Error: Failed to launch Burp Suite. Please check if it's installed correctly." + Style.RESET_ALL)
+            except Exception as e:
+                print(Fore.RED + f"Error launching Burp Suite: {str(e)}" + Style.RESET_ALL)
             spinner.stop()
             print("Burp Suite launched!")
 

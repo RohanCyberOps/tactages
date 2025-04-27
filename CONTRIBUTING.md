@@ -7,7 +7,7 @@ Thank you for considering contributing to Tactages Toolkit! We welcome contribut
 
 ### Reporting Issues
 
-If you encounter any bugs or have suggestions for improvements, please open an issue on the [GitHub Issues](https://github.com/RohanCyberOps/Tactages/issues) page. Provide as much detail as possible to help us understand and address the issue.
+If you encounter any bugs or have suggestions for improvements, please open an issue on the [GitHub Issues](https://github.com/RohanDevOps/Tactages/issues) page. Provide as much detail as possible to help us understand and address the issue.
 
 ### Submitting Pull Requests
 
@@ -57,6 +57,6 @@ By contributing to Tactages Toolkit, you agree that your contributions will be l
 
 ## Contact
 
-If you have any questions or need further assistance, please contact @RohanCyberOps.
+If you have any questions or need further assistance, please contact @RohanDevOps.
 
 Thank you for your contributions!
