@@ -6,8 +6,27 @@ import itertools
 import logging
 from colorama import Fore, Style
 
-# Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Create logs directory if it doesn't exist
+log_directory = 'src/logs'
+os.makedirs(log_directory, exist_ok=True)
+
+# Set log file path
+log_file = os.path.join(log_directory, 'application.log')
+
+# Configure logging to both file and console
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(name)s - %(funcName)s:%(lineno)d - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S',
+    handlers=[
+        logging.FileHandler(log_file),
+        logging.StreamHandler()
+    ]
+)
+
+# Example logging
+logging.info('Logger initialized successfully.')
 
 # Function for implementing the loading animation
 def load_animation():
