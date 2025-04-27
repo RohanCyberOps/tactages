@@ -132,6 +132,49 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 - [Nikto](https://cirt.net/Nikto2)
 - [Burp Suite](https://portswigger.net/burp)
 
+## Introduction
+
+1. **Nmap (Network Scanning)**  
+   Nmap is a network scanning tool used to discover devices and services on a network. It can be used to identify open ports, discover devices, and map networks.
+
+2. **Metasploit (Exploitation)**  
+   Metasploit is a powerful framework for exploiting vulnerabilities in systems. It allows penetration testers to use known exploits against remote systems and validate security flaws.
+
+3. **Wireshark (Traffic Capture)**  
+   Wireshark is a network protocol analyzer that captures and inspects network traffic in real time. It's used for network troubleshooting, protocol analysis, and security testing.
+
+4. **Hydra (Brute Force)**  
+   Hydra is a fast network logon cracker that supports many protocols, including HTTP, FTP, and SSH. It's commonly used in brute-force attacks to break weak passwords.
+
+5. **Utils (Packet Capture and Filtering)**  
+   A general term for tools that capture and filter packets on a network, such as tcpdump, which allows users to capture and analyze network traffic in real time.
+
+6. **John the Ripper (Password Cracking)**  
+   John the Ripper is a password cracking software that is used to test the strength of passwords. It can crack password hashes in various formats.
+
+7. **Netcat (Network Communication)**  
+   Netcat is a networking utility used for reading and writing data across network connections. It is used for debugging and testing network connections.
+
+8. **SQLMap (SQL Injection Testing)**  
+   SQLMap is an automated tool for detecting and exploiting SQL injection flaws in web applications. It supports a wide range of databases and is used to perform database enumeration and take control of databases.
+
+9. **Nikto (Web Server Scanning)**  
+   Nikto is a web server scanner that checks for various vulnerabilities in web servers, including outdated software, security misconfigurations, and known exploits.
+
+10. **Burp Suite (Web Application Security Testing)**  
+    Burp Suite is a comprehensive platform for web application security testing. It includes tools for scanning web applications for vulnerabilities, such as SQL injection, cross-site scripting (XSS), and others. It is widely used for penetration testing of web applications.
+
+## Additional Tools(Coming Soon):
+- **OWASP ZAP (Zed Attack Proxy)**  
+  A tool for finding security vulnerabilities in web applications. It provides automated scanners and various tools to help penetration testers and security experts assess the security of web apps.
+
+- **Acunetix**  
+  An automated web application security scanner that detects and reports on a wide range of vulnerabilities including SQL injection, XSS, and more.
+
+- **Wapiti**  
+  A web application vulnerability scanner that allows you to audit the security of your web applications. It supports a wide range of vulnerabilities like file inclusion, SQL injection, and XSS.
+
+
 ---
 
 ### Contributors
