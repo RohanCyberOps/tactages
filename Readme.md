@@ -1,6 +1,4 @@
 
-<img src="assets/image.png" alt="Tactages" width="4000" height="120" align="right">
-
 ---
 # Tactages Toolkit
 
