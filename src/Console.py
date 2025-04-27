@@ -7,7 +7,7 @@ import logging
 from colorama import Fore, Style
 
 # Create logs directory if it doesn't exist
-log_directory = 'src/logs'
+log_directory = 'logs'
 os.makedirs(log_directory, exist_ok=True)
 
 # Set log file path
